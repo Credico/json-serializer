@@ -1,5 +1,5 @@
 {
-    "name": "zumba/json-serializer",
+    "name": "credico/json-serializer",
     "type": "library",
     "description": "Serialize PHP variables, including objects, in JSON format. Support to unserialize it too.",
     "keywords": ["json", "serialize", "serializer"],
@@ -15,9 +15,6 @@
             "email": "juan.basso@zumba.com"
         }
     ],
-    "require": {
-        "php": ">=5.3.6"
-    },
     "require-dev": {
         "phpunit/phpunit": "3.7.*"
     },
