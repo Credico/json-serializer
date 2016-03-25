@@ -176,6 +176,9 @@ class JsonSerializer {
 			throw new JsonSerializerException('Unable to find class ' . $className);
 		}
 		$ref = new ReflectionClass($className);
+        if ('DateTime' == $className) {
+            return new \DateTime($value['date'], new \DateTimeZone($value['timezone']));
+        }
 		$obj = version_compare(PHP_VERSION, '5.4.0') >= 0 ?
 			$ref->newInstanceWithoutConstructor() :
 			unserialize('O:' . strlen($className) . ':"' . $className . '":0:{}');
